@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cores_array">
+        <item>#696969</item> <!-- TONS DE PRETO -->
+        <item>#808080</item>
+        <item>#A9A9A9</item>
+        <item>#C0C0C0</item>
+        <item>#000000</item> <!-- C5 -->
+        <item>#B0C4DE</item> <!-- TONS DE AZUL -->
+        <item>#00BFFF</item>
+        <item>#1E90FF</item>
+        <item>#4682B4</item>
+        <item>#4169E1</item>
+        <item>#6A5ACD</item>
+        <item>#483D8B</item>
+        <item>#0000FF</item>
+        <item>#000080</item> <!-- C14 -->
+        <item>#66CDAA</item> <!-- TONS DE VERDE -->
+        <item>#3CB371</item>
+        <item>#32CD32</item>
+        <item>#9ACD32</item>
+        <item>#6B8E23</item>
+        <item>#228B22</item>
+        <item>#008B8B</item>
+        <item>#556B2F</item>
+        <item>#808000</item>
+        <item>#006400</item> <!-- C24 -->
+        <item>#BC8F8F</item> <!-- TONS DE MARRON -->
+        <item>#F4A460</item>
+        <item>#CD853F</item>
+        <item>#D2691E</item>
+        <item>#8B4513</item>
+        <item>#FF00FF</item> <!-- TONS DE ROXO -->
+        <item>#DA70D6</item>
+        <item>#9400D3</item>
+        <item>#8B008B</item>
+        <item>#4B0082</item>
+        <item>#FFC0CB</item> <!-- TONS DE ROSA -->
+        <item>#F08080</item>
+        <item>#FF69B4</item>
+        <item>#FF1493</item> <!-- C38 -->
+        <item>#FA8072</item> <!-- TONS DE VERMELHO -->
+        <item>#FF7F50</item>
+        <item>#FF6347</item>
+        <item>#FF0000</item>
+        <item>#A52A2A</item>
+        <item>#FFA500</item> <!-- TONS DE LARANJA -->
+        <item>#FF8C00</item>
+        <item>#FF4500</item>
+        <item>#F0E68C</item> <!-- TONS DE AMARELO -->
+        <item>#FFFF00</item>
+        <item>#FFD700</item> <!-- C49 -->
+        <item>#FFFFFF</item> <!-- C50 -->
+    </string-array>
+</resources>

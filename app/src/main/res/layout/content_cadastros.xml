@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_cadastros"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="br.com.andrebronca.pluscontrol.Cadastros"
+        tools:showIn="@layout/activity_cadastros">
+
+        <Button
+            android:id="@+id/btn_cadastro_categoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableTop="@drawable/ic_btn_cadastro_categoria_24dp"
+            android:text="@string/btn_cad_categoria"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_cadastro_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableTop="@drawable/ic_btn_cadastro_cliente_24dp"
+            android:text="@string/btn_cad_cliente"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_cadastro_fornecedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableTop="@drawable/ic_btn_cadastro_fornecedor_24dp"
+            android:text="@string/btn_cad_fornecedor"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_cadastro_conta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableTop="@drawable/ic_btn_cadastro_conta_24dp"
+            android:text="@string/btn_cadastro_conta"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</ScrollView>

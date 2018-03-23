@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_relatorio_fluxo_caixa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="br.com.andrebronca.pluscontrol.RelatorioFluxoCaixa"
+        tools:showIn="@layout/activity_relatorio_fluxo_caixa">
+
+        <TextView
+            android:id="@+id/tv_fluxo_caixa_cab_periodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#ccc"
+            android:text="Período: " />
+
+        <Button
+            android:id="@+id/btn_fluxo_caixa_exportar_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fluxo_caixa_cab_periodo"
+            android:drawableEnd="@drawable/ic_exportar_pdf_24dp"
+            android:text="Exportar"
+            android:textAllCaps="false" />
+
+        <WebView
+            android:id="@+id/webview_fluxo_caixa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn_fluxo_caixa_exportar_pdf"
+            android:layout_marginTop="5dp" />
+
+    </RelativeLayout>
+</ScrollView>

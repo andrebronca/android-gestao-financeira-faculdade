@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="br.com.andrebronca.pluscontrol.MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_main_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_cadastros"
+                android:padding="15dp"
+                android:text="@string/btn_main_cadastros"
+                android:textAllCaps="false"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/btn_main_despesa_receita"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_despesa_receita"
+                android:elevation="3dp"
+                android:padding="15dp"
+                android:text="@string/btn_main_despesas_receitas"
+                android:textAllCaps="false"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_middle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/layout_top"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_main_movimento"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_movimentos"
+                android:elevation="2dp"
+                android:padding="15dp"
+                android:text="Pagamento / Recebimento / Transferência / Saque"
+                android:textAllCaps="false"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView10"
+            android:text="Vencida" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView11"
+            android:text="A receber nos próximos 30 dias"
+            android:textStyle="normal|italic" />
+
+        <TextView
+            android:id="@+id/tv_main_receita_vencida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/textView11"
+            android:layout_toEndOf="@+id/textView10"
+            android:layout_toRightOf="@+id/textView10"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorGreen"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/tv_main_receita_avencer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_main_receita_vencida"
+            android:layout_toEndOf="@+id/textView10"
+            android:layout_toRightOf="@+id/textView10"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="#1d1dbf"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_middle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:text="Receita"
+            android:textColor="@color/colorGreen"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView15"
+            android:text="Vencida" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView16"
+            android:text="A pagar nos próximos 30 dias"
+            android:textStyle="normal|italic" />
+
+        <TextView
+            android:id="@+id/tv_main_despesa_vencida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_main_despesa_avencer"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/tv_main_despesa_avencer"
+            android:layout_below="@+id/textView15"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/tv_main_despesa_avencer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_main_despesa_vencida"
+            android:layout_toEndOf="@+id/textView10"
+            android:layout_toRightOf="@+id/textView10"
+
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="#1d1dbf"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView12"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:text="Despesa"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="normal|bold" />
+
+        <View
+            android:id="@+id/main_linha"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textView17"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#266e1f" />
+
+        <TextView
+            android:id="@+id/tv_main_saldo_total_contas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView20"
+            android:layout_alignLeft="@+id/tv_main_despesa_avencer"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/tv_main_despesa_avencer"
+            android:text="TextView"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView28"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/textView28"
+            android:layout_below="@+id/textView20"
+            android:text="Total de Receita do período" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView27"
+            android:text="Total de Despesa do período" />
+
+        <TextView
+            android:id="@+id/main_total_receita_periodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_main_saldo_total_contas"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/tv_main_saldo_total_contas"
+            android:layout_below="@+id/tv_main_saldo_total_contas"
+            android:text="TextView"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/main_total_despesa_periodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/main_total_receita_periodo"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/main_total_receita_periodo"
+            android:layout_below="@+id/main_total_receita_periodo"
+            android:text="TextView"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/main_linha"
+            android:text="Saldo total das contas" />
+    </RelativeLayout>
+</ScrollView>

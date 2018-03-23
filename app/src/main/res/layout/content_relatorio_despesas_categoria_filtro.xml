@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_relatorio_despesas_categoria_filtro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="br.com.andrebronca.pluscontrol.RelatorioDespesasCategoriaFiltro"
+        tools:showIn="@layout/activity_relatorio_despesas_categoria_filtro">
+
+        <TextView
+            android:id="@+id/tv_relat_contas_pagar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Data de Emissão"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn_contas_pagar_data_ini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_relat_contas_pagar"
+            android:drawableStart="@drawable/ic_data_inicio_24dp"
+            android:text="Inicial"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/tv_rel_desp_cat_dt_nova"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_rel_contas_pagar_dt_antiga"
+            android:layout_marginTop="12dp"
+            android:text="Emissão até:" />
+
+        <TextView
+            android:id="@+id/tv_rel_contas_pagar_dt_antiga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn_contas_pagar_exibir"
+            android:layout_marginTop="17dp"
+            android:text="Emissão desde: "
+            android:textAlignment="viewStart" />
+
+        <Button
+            android:id="@+id/btn_desp_categ_data_fim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_contas_pagar_exibir"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:drawableEnd="@drawable/ic_data_fim_24dp"
+            android:text="Final"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_contas_pagar_exibir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn_contas_pagar_data_ini"
+            android:layout_marginTop="31dp"
+            android:drawableEnd="@drawable/ic_exibir_relatorio_24dp"
+            android:text="Exibir"
+            android:textAllCaps="false" />
+
+        <RadioGroup
+            android:id="@+id/rel_grafico_tipo_categoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn_contas_pagar_data_ini"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_rel_categoria_receita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Receita" />
+
+            <RadioButton
+                android:id="@+id/rb_rel_categoria_despesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Despesa" />
+        </RadioGroup>
+
+    <TextView
+        android:text="Obs.: Exibe o período atual por padrão."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_rel_desp_cat_dt_nova"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:id="@+id/textView26"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+</ScrollView>

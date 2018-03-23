@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.andrebronca.pluscontrol">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Cadastros"
+            android:label="@string/title_activity_cadastros"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CategoriaLista"
+            android:label="@string/title_activity_categoria_lista"
+            android:parentActivityName=".Cadastros"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Cadastros" />
+        </activity>
+        <activity
+            android:name=".CategoriaAdicionar"
+            android:label="@string/title_activity_categoria_adicionar"
+            android:parentActivityName=".CategoriaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.CategoriaLista" />
+        </activity>
+        <activity
+            android:name=".CategoriaDetalhes"
+            android:label="@string/title_activity_categoria_detalhes"
+            android:parentActivityName=".CategoriaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.CategoriaLista" />
+        </activity>
+        <activity
+            android:name=".CategoriaEditar"
+            android:label="@string/title_activity_categoria_editar"
+            android:parentActivityName=".CategoriaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.CategoriaLista" />
+        </activity>
+        <activity
+            android:name=".ClienteLista"
+            android:label="@string/title_activity_cliente_lista"
+            android:parentActivityName=".Cadastros"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Cadastros" />
+        </activity>
+        <activity
+            android:name=".ClienteAdicionar"
+            android:label="@string/title_activity_cliente_adicionar"
+            android:parentActivityName=".ClienteLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.ClienteLista" />
+        </activity>
+        <activity
+            android:name=".ClienteDetalhes"
+            android:label="@string/title_activity_cliente_detalhes"
+            android:parentActivityName=".ClienteLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.ClienteLista" />
+        </activity>
+        <activity
+            android:name=".ClienteEditar"
+            android:label="@string/title_activity_cliente_editar"
+            android:parentActivityName=".ClienteLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.ClienteLista" />
+        </activity>
+        <activity
+            android:name=".FornecedorLista"
+            android:label="@string/title_activity_fornecedor_lista"
+            android:parentActivityName=".Cadastros"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Cadastros" />
+        </activity>
+        <activity
+            android:name=".FornecedorAdicionar"
+            android:label="@string/title_activity_fornecedor_adicionar"
+            android:parentActivityName=".FornecedorLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.FornecedorLista" />
+        </activity>
+        <activity
+            android:name=".FornecedorDetalhes"
+            android:label="@string/title_activity_fornecedor_detalhes"
+            android:parentActivityName=".FornecedorLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.FornecedorLista" />
+        </activity>
+        <activity
+            android:name=".FornecedorEditar"
+            android:label="@string/title_activity_fornecedor_editar"
+            android:parentActivityName=".FornecedorLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.FornecedorLista" />
+        </activity>
+        <activity
+            android:name=".Titulos"
+            android:label="@string/title_activity_titulos"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ReceitaLista"
+            android:label="@string/title_activity_receita_lista"
+            android:parentActivityName=".Titulos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Titulos" />
+        </activity>
+        <activity
+            android:name=".ReceitaAdicionar"
+            android:label="@string/title_activity_receita_adicionar"
+            android:parentActivityName=".ReceitaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.ReceitaLista" />
+        </activity>
+        <activity
+            android:name=".ReceitaDetalhes"
+            android:label="@string/title_activity_receita_detalhes"
+            android:parentActivityName=".ReceitaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.ReceitaLista" />
+        </activity>
+        <activity
+            android:name=".ReceitaEditar"
+            android:label="Editar Receita"
+            android:parentActivityName=".ReceitaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.ReceitaLista" />
+        </activity>
+        <activity
+            android:name=".DespesaLista"
+            android:label="@string/title_activity_despesa_lista"
+            android:parentActivityName=".Titulos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Titulos" />
+        </activity>
+        <activity
+            android:name=".DespesaAdicionar"
+            android:label="@string/title_activity_despesa_adicionar"
+            android:parentActivityName=".DespesaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.DespesaLista" />
+        </activity>
+        <activity
+            android:name=".DespesaDetalhes"
+            android:label="@string/title_activity_despesa_detalhes"
+            android:parentActivityName=".DespesaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.DespesaLista" />
+        </activity>
+        <activity
+            android:name=".DespesasEditar"
+            android:label="@string/title_activity_despesas_editar"
+            android:parentActivityName=".DespesaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.DespesaLista" />
+        </activity>
+        <activity
+            android:name=".ContaLista"
+            android:label="@string/title_activity_conta_lista"
+            android:parentActivityName=".Cadastros"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Cadastros" />
+        </activity>
+        <activity
+            android:name=".ContaAdicionar"
+            android:label="@string/title_activity_conta_adicionar"
+            android:parentActivityName=".ContaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.ContaLista" />
+        </activity>
+        <activity
+            android:name=".ContaDetalhes"
+            android:label="@string/title_activity_conta_detalhes"
+            android:parentActivityName=".ContaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.ContaLista" />
+        </activity>
+        <activity
+            android:name=".ContaEditar"
+            android:label="@string/title_activity_conta_editar"
+            android:parentActivityName=".ContaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.ContaLista" />
+        </activity>
+        <activity
+            android:name=".Movimentos"
+            android:label="@string/title_activity_movimentos"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RecebimentoLista"
+            android:label="@string/title_activity_recebimento_lista"
+            android:parentActivityName=".Movimentos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Movimentos" />
+        </activity>
+        <activity
+            android:name=".RecebimentoDetalhes"
+            android:label="@string/title_activity_recebimento_detalhes"
+            android:parentActivityName=".RecebimentoLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.RecebimentoLista" />
+        </activity>
+        <activity
+            android:name=".RecebimentoEditar"
+            android:label="@string/title_activity_recebimento_editar"
+            android:parentActivityName=".RecebimentoLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.RecebimentoLista" />
+        </activity>
+        <activity
+            android:name=".TransferenciaLista"
+            android:label="@string/title_activity_transferencia_lista"
+            android:parentActivityName=".Movimentos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Movimentos" />
+        </activity>
+        <activity
+            android:name=".PagamentoLista"
+            android:label="@string/title_activity_pagamento_lista"
+            android:parentActivityName=".Movimentos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Movimentos" />
+        </activity>
+        <activity
+            android:name=".PagamentoDetalhes"
+            android:label="@string/title_activity_pagamento_detalhes"
+            android:parentActivityName=".PagamentoLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.PagamentoLista" />
+        </activity>
+        <activity
+            android:name=".PagamentoEditar"
+            android:label="@string/title_activity_pagamento_editar"
+            android:parentActivityName=".PagamentoLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.PagamentoLista" />
+        </activity>
+        <activity
+            android:name=".TransferenciaAdicionar"
+            android:label="@string/title_activity_transferencia_adicionar"
+            android:parentActivityName=".TransferenciaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.TransferenciaLista" />
+        </activity>
+        <activity
+            android:name=".SaqueLista"
+            android:label="@string/title_activity_saque_lista"
+            android:parentActivityName=".Movimentos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Movimentos" />
+        </activity>
+        <activity
+            android:name=".SaqueAdicionar"
+            android:label="@string/title_activity_saque_adicionar"
+            android:parentActivityName=".SaqueLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.SaqueLista" />
+        </activity>
+        <activity
+            android:name=".Sobre"
+            android:label="@string/title_activity_sobre"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.MainActivity" />
+        </activity>
+        <activity
+            android:name=".EstornoLista"
+            android:label="@string/title_activity_estorno_lista"
+            android:parentActivityName=".Movimentos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Movimentos" />
+        </activity>
+        <activity
+            android:name=".EstornoDetalhesConfirmar"
+            android:label="@string/title_activity_estorno_detalhes_confirmar"
+            android:parentActivityName=".EstornoLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.EstornoLista" />
+        </activity>
+        <activity
+            android:name=".SaqueDetalhes"
+            android:label="@string/title_activity_saque_detalhes"
+            android:parentActivityName=".SaqueLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.SaqueLista" />
+        </activity>
+        <activity
+            android:name=".TransferenciaDetalhes"
+            android:label="@string/title_activity_transferencia_detalhes"
+            android:parentActivityName=".TransferenciaLista"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.TransferenciaLista" />
+        </activity>
+        <activity
+            android:name=".Relatorios"
+            android:label="@string/title_activity_relatorios"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RelatorioDespesasCategoria"
+            android:label="@string/title_activity_relatorio_despesas_categoria"
+            android:parentActivityName=".RelatorioDespesasCategoriaFiltro"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Relatorios" />
+        </activity>
+        <activity
+            android:name=".RelatorioDespesasCategoriaFiltro"
+            android:label="@string/title_activity_relatorio_despesas_categoria_filtro"
+            android:parentActivityName=".Relatorios"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.RelatorioDespesasCategoria" />
+        </activity>
+        <activity
+            android:name=".RelatorioContasPagarFiltro"
+            android:label="@string/title_activity_relatorio_contas_pagar_filtro"
+            android:parentActivityName=".Relatorios"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Relatorios" />
+        </activity>
+        <activity
+            android:name=".RelatorioContasPagar"
+            android:label="@string/title_activity_relatorio_contas_pagar"
+            android:parentActivityName=".RelatorioContasPagarFiltro"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.RelatorioContasPagarFiltro" />
+        </activity>
+        <activity
+            android:name=".RelatorioContasReceberFiltro"
+            android:label="@string/title_activity_relatorio_contas_receber_filtro"
+            android:parentActivityName=".Relatorios"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Relatorios" />
+        </activity>
+        <activity
+            android:name=".RelatorioContasReceber"
+            android:label="@string/title_activity_relatorio_contas_receber"
+            android:parentActivityName=".RelatorioContasReceberFiltro"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.RelatorioContasReceberFiltro" />
+        </activity>
+        <activity
+            android:name=".RelatorioFluxoCaixaFiltro"
+            android:label="@string/title_activity_relatorio_fluxo_caixa_filtro"
+            android:parentActivityName=".Relatorios"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Relatorios" />
+        </activity>
+        <activity
+            android:name=".Backup"
+            android:label="@string/title_activity_backup"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Usuario"
+            android:label="@string/title_activity_usuario"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.MainActivity" />
+        </activity>
+        <activity
+            android:name=".BackupImport"
+            android:label="@string/title_activity_backup_import"
+            android:parentActivityName=".Backup"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.Backup" />
+        </activity>
+        <activity
+            android:name=".RelatorioFluxoCaixa"
+            android:label="@string/title_activity_relatorio_fluxo_caixa"
+            android:parentActivityName=".RelatorioFluxoCaixaFiltro"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.andrebronca.pluscontrol.RelatorioFluxoCaixaFiltro" />
+        </activity>
+    </application>
+
+</manifest>
